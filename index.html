@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodu Website Prototype</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1px;
+        }
+        .grid-item {
+            min-height: 100px;
+        }
+        .header, .footer {
+            grid-column: span 12;
+        }
+        .main-content {
+            grid-column: span 8;
+        }
+        .sidebar {
+            grid-column: span 4;
+        }
+        .subscribe-form input[type="email"] {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+        }
+        .subscribe-form button {
+            padding: 0.5rem 1rem;
+            background-color: #4F46E5;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+<div class="container mx-auto px-4">
+    <header class="header py-6">
+        <div class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Hodu</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li>HOme</li>
+                    <li>About</li>
+                    <li>Support</li>
+                    <li class="text-blue-600">Download</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container my-6">
+        <section class="main-content">
+            <h2 class="text-2xl font-semibold mb-4">Lorem Ipsum is simply</h2>
+            <p class="mb-4">dummy text of the printing and</p>
+            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="mb-4">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Download</button>
+            <div class="my-6">
+                <h3 class="text-xl font-semibold mb-4">Lorem Ipsum is simply</h3>
+                <p class="mb-4">dummy text of the printing and dummy text</p>
+                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="mb-4">dummy text of the printing and dummy</p>
+                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="mb-4">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md">show more</button>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md my-6">Continue exploring HODU</button>
+            <div class="subscribe-form my-6">
+                <h4 class="text-lg font-semibold mb-2">Subscribe to our Blog post</h4>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Enter your e-mail address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="text-sm">Lorem Ipsum has been the industry's standard dummy text</p>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer py-6 text-center">
+        <p>HODU</p>
+    </footer>
+</div>
+</body>
+</html>
